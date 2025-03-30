@@ -51,6 +51,7 @@
     width: 35px;
 }
 
+/* ------- NAVBAR PROFILE ------- */
 .navbar-profile {
     display: flex;
     align-items: center;
@@ -78,4 +79,9 @@
 
 .navbar-profile:hover .dropdown {
     display: block;
+}
+
+/* -------- NAVBAR SCROLLING TIME --------- */
+.nav-dark {
+    background: #141414;
 }

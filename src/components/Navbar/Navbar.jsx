@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
@@ -8,11 +9,25 @@ import profile_img from "../../assets/profile_img.png";
 import caret_icon from "../../assets/caret_icon.svg";
 
 const Navbar = () => {
+  const navRef = useRef();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= 80) {
+        navRef.current.classList.add("nav-dark");
+      } else {
+        navRef.current.classList.remove("nav-dark");
+      }
+    });
+  }, []);
+
   return (
     <>
-      <div className="navbar">
+      <div ref={navRef} className="navbar">
         <div className="navbar-left">
-          <img src={logo} alt="netflix_logo" />
+          <Link to='/'>
+            <img src={logo} alt="netflix_logo" />
+          </Link>
           <ul>
             <li>Home</li>
             <li>TV Shows</li>
