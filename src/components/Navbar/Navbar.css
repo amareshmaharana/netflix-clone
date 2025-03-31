@@ -85,3 +85,28 @@
 .nav-dark {
     background: #141414;
 }
+
+/* ------- MEDIA RESPONSIVE ------- */
+@media (max-width: 800px) {
+    .navbar {
+        padding: 20px 4%;
+    }
+
+    .navbar-left ul {
+        display: none;
+    }
+
+    .navbar img {
+        height: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar img {
+        height: 34px;
+    }
+
+    .navbar-right {
+        gap: 10px;
+    }
+}

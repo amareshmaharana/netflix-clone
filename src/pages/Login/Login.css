@@ -111,3 +111,15 @@
 .login-spinner img {
     width: 140px;
 }
+
+/* -------- MEDIA RESPONSIVE -------- */
+@media (max-width: 500px) {
+    .login {
+        padding: 15px 5%;
+    }
+
+    .login-form {
+        padding: 30px;
+        margin-top: 60px;
+    }
+}
